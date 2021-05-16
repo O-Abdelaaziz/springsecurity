@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Author Abdelaaziz Ouakala
  **/
 @Controller
-@RequestMapping("api")
+@RequestMapping("api/")
 public class LoginController {
 
     @GetMapping(path = "login")
