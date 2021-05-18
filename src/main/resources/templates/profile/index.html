@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head th:insert="fragments.html :: headerfiles"></head>
 <body>
@@ -9,12 +10,12 @@
     <p>This is User Profile\Index. Only authenticated people can see this</p>
     <table>
         <tr>
-            <td>Username</td>
-            <td><span></span></td>
+            <td >Username: </td>
+            <td><span sec:authentication="name"></span></td>
         </tr>
         <tr>
             <td>Authorities</td>
-            <td><span></span></td>
+            <td sec:authentication="principal.authorities"><span></span></td>
         </tr>
     </table>
 </div>
