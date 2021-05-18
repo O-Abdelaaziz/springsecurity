@@ -34,6 +34,14 @@ public class User implements Serializable {
     private String address;
     private Integer active;
 
+    public User(String username, String password, Integer age, String address, Integer active) {
+        this.username = username;
+        this.password = password;
+        this.age = age;
+        this.address = address;
+        this.active = active;
+    }
+
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
