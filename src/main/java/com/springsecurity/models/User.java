@@ -1,8 +1,12 @@
 package com.springsecurity.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,6 +17,10 @@ import java.util.Set;
  * @User LegendDZ
  * @Author Abdelaaziz Ouakala
  **/
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "users" ,schema = "public")
 public class User implements Serializable {
@@ -41,5 +49,5 @@ public class User implements Serializable {
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "authorities")}
     )
-    private Set<Authorities> authorities=new HashSet<>();
+    private Set<Authority> authorities=new HashSet<>();
 }

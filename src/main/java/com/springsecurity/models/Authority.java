@@ -1,5 +1,10 @@
 package com.springsecurity.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,9 +16,13 @@ import java.util.Set;
  * @User LegendDZ
  * @Author Abdelaaziz Ouakala
  **/
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "authorities" ,schema = "public")
-public class Authorities {
+public class Authority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

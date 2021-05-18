@@ -1,5 +1,10 @@
 package com.springsecurity.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,6 +16,10 @@ import java.util.Set;
  * @User LegendDZ
  * @Author Abdelaaziz Ouakala
  **/
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "roles" ,schema = "public")
 public class Role {
